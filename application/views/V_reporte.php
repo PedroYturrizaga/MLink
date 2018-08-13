@@ -20,7 +20,6 @@
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metric.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
-    	<!-- <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>"> -->
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
@@ -60,12 +59,6 @@
                             <a onclick="openModalRecuperar()">¿Olvidaste tu contrase&ntilde;a?</a>
                         </div>
                     </div>
-                    <!-- <div class="col-xs-12 mdl-card__actions text-left" onclick="openModalCambiar()">
-                        <span>Cambiar contraseña</span>
-                    </div>
-                    <div class="col-xs-12 mdl-card__actions text-left" onclick="openModalCrear()">
-                        <span >Registrarse</span>
-                    </div> -->
                 </div>
             </div>
         </section>
@@ -163,52 +156,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <section class>
-            <div class="header">
-                <div class="mdl-container row">
-                    <div class="col-xs-12">
-                        <div class="col-xs-6 text-left p-0">
-                            <img src="<?php echo RUTA_IMG?>logo/logo_header.png">
-                        </div>
-                        <div class="col-xs-6 text-right p-0">
-                            <p>Registro de oportunidades HPE</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="center-login">
-                <div class="mdl-card mdl-card-login">
-                    <div class="mdl-card__supporting-text">
-                        <div class="col-xs-12 form-group mdl-input">
-                            <label for="usuario">Username</label>
-                            <input type="text" id="usuario" placeholder="" onkeyup="verificarDatos(event);">
-                        </div>
-                        <div class="col-xs-12 form-group mdl-input">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" onkeyup="verificarDatos(event);">
-                        </div>
-                        <div class="col-xs-12 mdl-label">
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="remember">
-                                <input type="checkbox" id="remember" class="mdl-checkbox__input">
-                                <span class="mdl-checkbox__label">Remember me</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mdl-card__actions p-0">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
-                    </div>
-                    <div class="col-xs-12 mdl-create">
-                        <div class="col-xs-6">
-                            <a href="">Forgot password</a>
-                        </div>
-                        <div class="col-xs-6">
-                            <a href="Registro">Create an account</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
@@ -217,7 +164,7 @@
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>reporte.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');

@@ -1,6 +1,6 @@
 <?php 
 
-class M_Login extends CI_Model {
+class M_Reporte extends CI_Model {
 	
 	function __construct() {
 		parent::__construct();
