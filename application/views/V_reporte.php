@@ -89,7 +89,7 @@
                                     <th>Ancho</th>
                                     <th>Medida</th>
                                     <th>Codigo</th>
-                                    <th>Sustrato</th>
+                                    <th>Acabados</th>
                                     <th>Area</th>
                                 </tr>
                             </thead>
@@ -112,7 +112,7 @@
                                     <th>Ancho</th>
                                     <th>Medida</th>
                                     <th>Codigo</th>
-                                    <th>Sustrato</th>
+                                    <th>Impresoras</th>
                                     <th>Area</th>
                                 </tr>
                             </thead>
@@ -135,7 +135,7 @@
                                     <th>Ancho</th>
                                     <th>Medida</th>
                                     <th>Codigo</th>
-                                    <th>Sustrato</th>
+                                    <th>Materiales</th>
                                     <th>Area</th>
                                 </tr>
                             </thead>
@@ -158,7 +158,7 @@
                                     <th>Ancho</th>
                                     <th>Medida</th>
                                     <th>Codigo</th>
-                                    <th>Sustrato</th>
+                                    <th>Proveedores</th>
                                     <th>Area</th>
                                 </tr>
                             </thead>
@@ -181,7 +181,7 @@
                                     <th>Ancho</th>
                                     <th>Medida</th>
                                     <th>Codigo</th>
-                                    <th>Sustrato</th>
+                                    <th>Personales</th>
                                     <th>Area</th>
                                 </tr>
                             </thead>
@@ -204,7 +204,7 @@
                                     <th>Ancho</th>
                                     <th>Medida</th>
                                     <th>Codigo</th>
-                                    <th>Sustrato</th>
+                                    <th>Recursos</th>
                                     <th>Area</th>
                                 </tr>
                             </thead>
