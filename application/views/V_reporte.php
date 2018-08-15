@@ -78,65 +78,144 @@
                 </div>
             </div>
             <div id="Acabados" class="tabcontent" style="display:none">
-                <h3>Acabados</h3>
-            </div>
-            <div id="Impresoras" class="tabcontent" style="display:none">
-                <h3>Impresoras</h3>
-            </div>
-            <div id="Materiales" class="tabcontent" style="display:none">
-                <h3>Materiales</h3>
-            </div>
-            <div id="Proveedores" class="tabcontent" style="display:none">
-                <h3>Proveedores</h3>
-            </div>
-            <div id="Personales" class="tabcontent" style="display:none">
-                <h3>Personales</h3>
-            </div>
-            <div id="Recursos" class="tabcontent" style="display:none">
-                <h3>Recursos</h3>
-            </div>
-        </div>  
-
-        <!-- <div class="js-header js-header--login">
-            <div class="js-header--left">
-                <img class="js-partner" src="<?php echo RUTA_IMG?>logo/hpe-logo.svg">
-                <img src="<?php echo RUTA_IMG?>logo/microsoft-logo.png">
-            </div>
-            <div class="js-header--right">
-                <p>IMAGENTI</p>
-            </div>
-        </div>
-        <section class="js-section js-height">
-            <div class="js-fondo--login"></div>
-            <div class="js-container js-flex">
-                <div class="js-login">
-                    <h2>Acceso a la Herramienta</h2>
-                    <div class="col-xs-12 js-input m-0">
-                        <label for="usuario">Usuario</label>
-                        <input type="text" id="usuario" onkeyup="verificarDatos(event);">
-                    </div>
-                    <div class="col-xs-12 js-input m-0">
-                        <label for="password">Contrase&ntilde;a</label>
-                        <input type="password" id="password" onkeyup="verificarDatos(event);">
-                    </div>
-                    <div class="col-xs-12 p-0">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--login" onclick="ingresar()">Login</button>
-                    </div>
-                    <div class="col-xs-12 js-middle">
-                        <div class="js-middle--left">
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="remember">
-                                <input type="checkbox" id="remember" class="mdl-checkbox__input">
-                                <span class="mdl-checkbox__label">Remember me</span>
-                            </label>
-                        </div>
-                        <div class="js-middle--right">
-                            <a onclick="openModalRecuperar()">¿Olvidaste tu contrase&ntilde;a?</a>
-                        </div>
+                <div style="padding-left: 20px; padding-right: 20px">
+                    <h3>Acabados</h3>
+                    <div class="table-responsive">
+                        <table class="table" id="tbAcabados">
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th>Alto</th>
+                                    <th>Ancho</th>
+                                    <th>Medida</th>
+                                    <th>Codigo</th>
+                                    <th>Sustrato</th>
+                                    <th>Area</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyAcabados">
+                                <!-- <?php echo $bodyCanales?> -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-        </section> -->
-
+            <div id="Impresoras" class="tabcontent" style="display:none">
+                <div style="padding-left: 20px; padding-right: 20px">
+                    <h3>Impresoras</h3>
+                    <div class="table-responsive">
+                        <table class="table" id="tbImpresoras">
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th>Alto</th>
+                                    <th>Ancho</th>
+                                    <th>Medida</th>
+                                    <th>Codigo</th>
+                                    <th>Sustrato</th>
+                                    <th>Area</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyImpresoras">
+                                <!-- <?php echo $bodyCanales?> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="Materiales" class="tabcontent" style="display:none">
+                <div style="padding-left: 20px; padding-right: 20px">
+                    <h3>Materiales</h3>
+                    <div class="table-responsive">
+                        <table class="table" id="tbMateriales">
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th>Alto</th>
+                                    <th>Ancho</th>
+                                    <th>Medida</th>
+                                    <th>Codigo</th>
+                                    <th>Sustrato</th>
+                                    <th>Area</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyMateriales">
+                                <!-- <?php echo $bodyCanales?> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="Proveedores" class="tabcontent" style="display:none">
+                <div style="padding-left: 20px; padding-right: 20px">
+                    <h3>Proveedores</h3>
+                    <div class="table-responsive">
+                        <table class="table" id="tbProveedores">
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th>Alto</th>
+                                    <th>Ancho</th>
+                                    <th>Medida</th>
+                                    <th>Codigo</th>
+                                    <th>Sustrato</th>
+                                    <th>Area</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyProveedores">
+                                <!-- <?php echo $bodyCanales?> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="Personales" class="tabcontent" style="display:none">
+                <div style="padding-left: 20px; padding-right: 20px">
+                    <h3>Personales</h3>
+                    <div class="table-responsive">
+                        <table class="table" id="tbPersonales">
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th>Alto</th>
+                                    <th>Ancho</th>
+                                    <th>Medida</th>
+                                    <th>Codigo</th>
+                                    <th>Sustrato</th>
+                                    <th>Area</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyPersonales">
+                                <!-- <?php echo $bodyCanales?> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="Recursos" class="tabcontent" style="display:none">
+                <div style="padding-left: 20px; padding-right: 20px">
+                    <h3>Recursos</h3>
+                    <div class="table-responsive">
+                        <table class="table" id="tbRecursos">
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th>Alto</th>
+                                    <th>Ancho</th>
+                                    <th>Medida</th>
+                                    <th>Codigo</th>
+                                    <th>Sustrato</th>
+                                    <th>Area</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyRecursos">
+                                <!-- <?php echo $bodyCanales?> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- MODAL RECUPERAR CONTRASEÑA -->
         <!-- <div class="modal fade" id="recuperaContrasena" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-sm">
@@ -160,35 +239,6 @@
                 </div>
             </div>
         </div> -->
-        
-        <!--MODAL CAMBIO CONTRASEÑA -->
-        <!-- <div class="modal fade" id="cambioContrasena" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-            <div class="modal-dialog modal-sm text-center">
-                <div class="modal-content">
-                    <div class="mdl-card">
-                        <div class="mdl-card__supporting-text">
-                            <h2>CAMBIAR CONTRASE&Ntilde;A</h2>
-                            <div class="col-xs-12 form-group js-input">
-                                <label for="usuario">Usuario</label>
-                                <input type="text" id="usuarioCambio" onkeyup="verificarDatos(event);">
-                            </div>
-                            <div class="col-xs-12 form-group js-input">
-                                <label for="password">Nueva contrase&ntilde;a</label>
-                                <input type="password" id="newPassword" onkeyup="verificarDatos(event);">
-                            </div>
-                            <div class="col-xs-12 form-group js-input">
-                                <label for="confirmPassword">Confirmar contrase&ntilde;a</label>
-                                <input type="confirmPassword" id="confirmPassword" onkeyup="verificarDatos(event);">
-                            </div>
-                        </div> 
-                        <div class="mdl-card__actions">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-dismiss="modal">Cancelar</button>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="cambiar()">Aceptar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
@@ -204,20 +254,6 @@
             } else {
                 $('select').selectpicker();
             }
-            $(document).ready(function(){
-            let CHECK = sessionStorage.getItem('CHECK');
-            let USERNAME = sessionStorage.getItem('USERNAME');
-            let PASS = sessionStorage.getItem('PASS');
-           if(CHECK == 1) {
-                $('#remember').prop('checked', true);
-                $('#usuario').val(USERNAME);
-                $('#password').val(PASS);
-           }else {
-                $('#remember').prop('checked', false);
-                $('#usuario').val('');
-                $('#password').val('');
-           }
-        });
         </script>
     </body>
 </html>
