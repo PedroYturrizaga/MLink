@@ -19,43 +19,17 @@ class Reporte extends CI_Controller {
 		$this->load->view('v_reporte');
 	}
 
-	function ingresar() {
-		$data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-         try {
-            $usuario  = $this->input->post('usuario');
-            $password = $this->input->post('password');
-            $username = $this->M_Reporte->verificaUsuario($usuario);
-            if(count($username) != 0){
-                if(strtolower($username[0]->usuario) == strtolower($usuario)){
-                    if($password == $username[0]->pass){
-                        $session = array('usuario' => $usuario,  
-                                         'Id_user' => $username[0]->id_vendedor,
-                                         'id_rol'  => $username[0]->id_rol,
-                                         'pais'    => $username[0]->pais);
-                        $this->session->set_userdata($session);
-                        $data['rol'] = $username[0]->id_rol;
-                        $data['error'] = EXIT_SUCCESS;
-                    }else {
-                        $data['pass'] = 'Contraseña incorrecta';
-                    }
-                }
-            }
-        }catch(Exception $e) {
-           $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
-	}
-
-	function cerrarCesion(){
+    function muestraDatos() {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-            $this->session->unset_userdata('usuario');
-            $this->session->unset_userdata('Id_user');
-            $this->session->unset_userdata('id_rol');
-            $data['error'] = EXIT_SUCCESS;
-        } catch (Exception $e){
+            $variable1 = $_POST['nombreVariable'];
+            $variable2 = json_decode($variable1);
+            // $variable1 = $_POST['nombreVariable'];
+            // $variable1 = $_POST['nombreVariable'];
+            // $variable1 = $_POST['nombreVariable'];
+        }
+        catch (Exception $e) {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);

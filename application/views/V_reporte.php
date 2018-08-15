@@ -10,7 +10,7 @@
         <meta name="date"                   content="Febrero 15, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
-    	<title>HPE Microsoft</title>
+    	<title>M-lini - OPI</title>
     	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.ico">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
@@ -29,7 +29,7 @@
                 <img src="<?php echo RUTA_IMG?>logo/microsoft-logo.png">
             </div>
             <div class="js-header--right">
-                <p>Registro de Oportunidades Centroam&eacute;rica</p>
+                <p>M-Link</p>
             </div>
         </div>
         <section class="js-section js-height">
@@ -110,47 +110,6 @@
                         <div class="mdl-card__actions">
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-dismiss="modal">Cancelar</button>
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="cambiar()">Aceptar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--MODAL REGISTRAR NUEVO USUARIO -->
-        <div class="modal fade" id="registroUsuario" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-            <div class="modal-dialog modal-md text-center">
-                <div class="modal-content">
-                    <div class="mdl-card">
-                        <div class="mdl-card__supporting-text">
-                            <h2>REGISTRAR USUARIO</h2>
-                            <div class="form-group col-xs-12 p-0">
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre" onchange="validarCampos()">
-                            </div>
-                            <div class="form-group col-xs-12 p-0">
-                                <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" onchange="validarCampos()">
-                            </div>
-                            <div class="form-group col-xs-12 p-0">
-                                <input type="text" class="form-control" id="canal" placeholder="Canal" onchange="validarCampos()">
-                            </div>
-                            <div class="form-group col-xs-12 p-0">
-                                <input type="text" class="form-control" id="pais" placeholder="Pais" onchange="validarCampos()">
-                            </div>
-                            <div class="form-group col-xs-12 p-0">
-                                <input type="email" class="form-control" id="email" placeholder="Email" onchange="validarCampos()">
-                            </div>
-                            <div class="form-group col-xs-12 p-0">
-                                <input type="text" class="form-control" id="movil" placeholder="M&oacute;vil" onchange="validarCampos()">
-                            </div>
-                            <div class="form-group col-xs-12 p-0">
-                                <input type="password" class="form-control" id="pass" placeholder="Contrase&ntilde;a" onchange="validarCampos()">
-                            </div>
-                            <div class="form-group col-xs-12 p-0">
-                                <input type="password" class="form-control" id="passRep" placeholder="Repetir contrase&ntilde;" onchange="validarCampos()">
-                            </div>
-                        </div> 
-                        <div class="mdl-card__actions">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-dismiss="modal">Cancelar</button>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="registrar()">Aceptar</button>
                         </div>
                     </div>
                 </div>
