@@ -4,10 +4,10 @@
     	<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible"  content="IE=edge">
         <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        <meta name="description"            content="Registro de Oportunidades DCN">
-        <meta name="keywords"               content="Registro de Oportunidades DCN">
+        <meta name="description"            content="MLink">
+        <meta name="keywords"               content="MLink">
         <meta name="robots"                 content="Index,Follow">
-        <meta name="date"                   content="Febrero 15, 2018"/>
+        <meta name="date"                   content="Agosto 13, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
     	<title>M-lini - OPI</title>
@@ -18,18 +18,92 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metric.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <div class="js-header js-header--login">
+        <div class="col-md-12" style="padding-top: 2%">
+            <div class="col-md-6 text-left">
+                <p>AREA DE IMPRESION Y ACABADOS</p>
+                <p>Jueves 8 de Agosto</p>
+            </div>
+            <div class="col-md-6 text-right">
+                <p>IMAGENTI</p>
+            </div>
+        </div>
+        <div class="col-md-12" style="padding-top: 2%">
+            <div class="col-md-6 text-left">
+                <h6>1882018236</h6>
+            </div>
+            <div class="col-md-6 text-right">
+                <h6>Reporte de Liquidación</h6>
+            </div>
+        </div>
+        <div class="row-fluid col-md-12" style="background: #d6d5d5">
+            <h4> COLUMNA impresión panel ranurado - RIPLEY MEGAPLAZA </h4>
+        </div>
+        <div class="col-md-12" style="padding-top: 5px">
+            <div class="tab" >
+                <button class="tablinks" onclick="openTab(event, 'Sustratos')" >Sustratos</button>
+                <button class="tablinks" onclick="openTab(event, 'Acabados')" >Acabados</button>
+                <button class="tablinks" onclick="openTab(event, 'Impresoras')" >Impresoras</button>
+                <button class="tablinks" onclick="openTab(event, 'Materiales')" >Materiales</button>
+                <button class="tablinks" onclick="openTab(event, 'Proveedores')" >Proveedores</button>
+                <button class="tablinks" onclick="openTab(event, 'Personales')" >Personales</button>
+                <button class="tablinks" onclick="openTab(event, 'Recursos')" >Recursos</button>
+            </div>
+        </div>
+        <div>
+            <div id="Sustratos" class="tabcontent" style="display:none">
+                <div style="padding-left: 20px">
+                    <div class="table-responsive">
+                        <table class="table" id="tbSustratos">
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th>Alto</th>
+                                    <th>Ancho</th>
+                                    <th>Medida</th>
+                                    <th>Codigo</th>
+                                    <th>Sustrato</th>
+                                    <th>Area</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodySustratos">
+                                <!-- <?php echo $bodyCanales?> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h3>Sustratos</h3>
+            </div>
+            <div id="Acabados" class="tabcontent" style="display:none">
+                <h3>Acabados</h3>
+            </div>
+            <div id="Impresoras" class="tabcontent" style="display:none">
+                <h3>Impresoras</h3>
+            </div>
+            <div id="Materiales" class="tabcontent" style="display:none">
+                <h3>Materiales</h3>
+            </div>
+            <div id="Proveedores" class="tabcontent" style="display:none">
+                <h3>Proveedores</h3>
+            </div>
+            <div id="Personales" class="tabcontent" style="display:none">
+                <h3>Personales</h3>
+            </div>
+            <div id="Recursos" class="tabcontent" style="display:none">
+                <h3>Recursos</h3>
+            </div>
+        </div>  
+
+        <!-- <div class="js-header js-header--login">
             <div class="js-header--left">
                 <img class="js-partner" src="<?php echo RUTA_IMG?>logo/hpe-logo.svg">
                 <img src="<?php echo RUTA_IMG?>logo/microsoft-logo.png">
             </div>
             <div class="js-header--right">
-                <p>M-Link</p>
+                <p>IMAGENTI</p>
             </div>
         </div>
         <section class="js-section js-height">
@@ -61,10 +135,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- MODAL RECUPERAR CONTRASEÑA -->
-        <div class="modal fade" id="recuperaContrasena" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <!-- <div class="modal fade" id="recuperaContrasena" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="mdl-card">
@@ -85,10 +159,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <!--MODAL CAMBIO CONTRASEÑA -->
-        <div class="modal fade" id="cambioContrasena" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <!-- <div class="modal fade" id="cambioContrasena" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-sm text-center">
                 <div class="modal-content">
                     <div class="mdl-card">
@@ -114,7 +188,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
