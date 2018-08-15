@@ -61,17 +61,15 @@
                         <table class="table" id="tbSustratos">
                             <thead>
                                 <tr>
-                                    <th>Cantidad</th>
-                                    <th>Alto</th>
-                                    <th>Ancho</th>
-                                    <th>Medida</th>
-                                    <th>Codigo</th>
-                                    <th>Sustrato</th>
-                                    <th>Area</th>
+                                    <th>CÓDIGO</th>
+                                    <th>UNIDADES</th>
+                                    <th>LONGITUD</th>
+                                    <th>TIEMPO</th>
+                                    <th>ÁREA</th>
                                 </tr>
                             </thead>
                             <tbody id="bodySustratos">
-                                <!-- <?php echo $bodyCanales?> -->
+                                <?php echo $suministros?>
                             </tbody>
                         </table>
                     </div>
@@ -84,17 +82,15 @@
                         <table class="table" id="tbAcabados">
                             <thead>
                                 <tr>
-                                    <th>Cantidad</th>
-                                    <th>Alto</th>
-                                    <th>Ancho</th>
-                                    <th>Medida</th>
-                                    <th>Codigo</th>
-                                    <th>Acabados</th>
-                                    <th>Area</th>
+                                    <th>CÓDIGO</th>
+                                    <th>UNIDADES</th>
+                                    <th>LONGITUD</th>
+                                    <th>TIEMPO</th>
+                                    <th>ÁREA</th>
                                 </tr>
                             </thead>
                             <tbody id="bodyAcabados">
-                                <!-- <?php echo $bodyCanales?> -->
+                                <?php echo $acabados?>
                             </tbody>
                         </table>
                     </div>
@@ -107,17 +103,15 @@
                         <table class="table" id="tbImpresoras">
                             <thead>
                                 <tr>
-                                    <th>Cantidad</th>
-                                    <th>Alto</th>
-                                    <th>Ancho</th>
-                                    <th>Medida</th>
-                                    <th>Codigo</th>
-                                    <th>Impresoras</th>
-                                    <th>Area</th>
+                                    <th>CÓDIGO</th>
+                                    <th>UNIDADES</th>
+                                    <th>LONGITUD</th>
+                                    <th>TIEMPO</th>
+                                    <th>ÁREA</th>
                                 </tr>
                             </thead>
                             <tbody id="bodyImpresoras">
-                                <!-- <?php echo $bodyCanales?> -->
+                                <?php echo $impresoras?>
                             </tbody>
                         </table>
                     </div>
@@ -140,7 +134,7 @@
                                 </tr>
                             </thead>
                             <tbody id="bodyMateriales">
-                                <!-- <?php echo $bodyCanales?> -->
+                                <?php echo $materiales?>
                             </tbody>
                         </table>
                     </div>
@@ -176,17 +170,13 @@
                         <table class="table" id="tbPersonales">
                             <thead>
                                 <tr>
-                                    <th>Cantidad</th>
-                                    <th>Alto</th>
-                                    <th>Ancho</th>
-                                    <th>Medida</th>
-                                    <th>Codigo</th>
-                                    <th>Personales</th>
-                                    <th>Area</th>
+                                    <th>CÓDIGO</th>
+                                    <th>CANTIDAD</th>
+                                    <th>IMPORTE</th>
                                 </tr>
                             </thead>
                             <tbody id="bodyPersonales">
-                                <!-- <?php echo $bodyCanales?> -->
+                                <?php echo $personal?>
                             </tbody>
                         </table>
                     </div>
@@ -214,6 +204,9 @@
                         </table>
                     </div>
                 </div>
+            </div>
+            <div>
+                <button type="button" name="boton" id="boton1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" style="display:none">GRABAR Y CERRAR</button>
             </div>
         </div>
         <!-- MODAL RECUPERAR CONTRASEÑA -->
