@@ -42,7 +42,7 @@
         <div class="row-fluid col-md-12" style="background: #d6d5d5">
             <h4> COLUMNA impresión panel ranurado - RIPLEY MEGAPLAZA </h4>
         </div>
-        <div class="col-md-12" style="padding-top: 5px">
+        <div class="col-md-12" style="padding-top: 15px">
             <div class="tab" >
                 <button class="tablinks" onclick="openTab(event, 'Sustratos')" >Sustratos</button>
                 <button class="tablinks" onclick="openTab(event, 'Acabados')" >Acabados</button>
@@ -55,7 +55,8 @@
         </div>
         <div>
             <div id="Sustratos" class="tabcontent" style="display:none">
-                <div style="padding-left: 20px">
+                <div style="padding-left: 20px; padding-right: 20px">
+                    <h3>Sustratos</h3>
                     <div class="table-responsive">
                         <table class="table" id="tbSustratos">
                             <thead>
@@ -75,7 +76,6 @@
                         </table>
                     </div>
                 </div>
-                <h3>Sustratos</h3>
             </div>
             <div id="Acabados" class="tabcontent" style="display:none">
                 <h3>Acabados</h3>
