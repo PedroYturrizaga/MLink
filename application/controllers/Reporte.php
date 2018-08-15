@@ -26,6 +26,8 @@ class Reporte extends CI_Controller {
         $impresoras  = '';
         $materiales  = '';
         $personal    = '';
+        $proveedores = '';
+        $recursos    = '';
         foreach ($variable2[0] as $key) {
             foreach ($key as $value) {
                 if($value->nombre == 'Sumistros'){  
@@ -64,9 +66,20 @@ class Reporte extends CI_Controller {
                                       <td>'.$value->cantidad.'</td>
                                       <td>'.$value->importe.'</td>
                                   </tr>';
-                } /*else if () {
-
-                }*/
+                } else if ($value->nombre == 'Proveedores') {
+                    $proveedores .= '<tr>
+                                         <td>'.$value->codigo.'</td>
+                                         <td>'.$value->cantidad.'</td>
+                                         <td>'.$value->soles.'</td>
+                                         <td>'.$value->dolares.'</td>
+                                     </tr>';
+                }else if ($value->nombre == 'Recursos') {
+                    $recursos .= '<tr>
+                                      <td>'.$value->codigo.'</td>
+                                      <td>'.$value->cantidad.'</td>
+                                      <td>'.$value->horas.'</td>
+                                  </tr>';
+                }
             }
         }
         $data['suministros'] = $suministros;
@@ -74,6 +87,8 @@ class Reporte extends CI_Controller {
         $data['impresoras']  = $impresoras;
         $data['materiales']  = $materiales;
         $data['personal']    = $personal;
+        $data['proveedores'] = $proveedores;
+        $data['recursos']    = $recursos;
 		$this->load->view('v_reporte', $data);
 	}
 

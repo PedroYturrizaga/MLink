@@ -124,13 +124,9 @@
                         <table class="table" id="tbMateriales">
                             <thead>
                                 <tr>
-                                    <th>Cantidad</th>
-                                    <th>Alto</th>
-                                    <th>Ancho</th>
-                                    <th>Medida</th>
-                                    <th>Codigo</th>
-                                    <th>Materiales</th>
-                                    <th>Area</th>
+                                    <th>CÓDIGO</th>
+                                    <th>CANTIDAD</th>
+                                    <th>TOTAL</th>
                                 </tr>
                             </thead>
                             <tbody id="bodyMateriales">
@@ -147,17 +143,14 @@
                         <table class="table" id="tbProveedores">
                             <thead>
                                 <tr>
-                                    <th>Cantidad</th>
-                                    <th>Alto</th>
-                                    <th>Ancho</th>
-                                    <th>Medida</th>
-                                    <th>Codigo</th>
-                                    <th>Proveedores</th>
-                                    <th>Area</th>
+                                    <th>CÓDIGO</th>
+                                    <th>CANTIDAD</th>
+                                    <th>SOLES</th>
+                                    <th>DÓLATES</th>
                                 </tr>
                             </thead>
                             <tbody id="bodyProveedores">
-                                <!-- <?php echo $bodyCanales?> -->
+                                <?php echo $proveedores?>
                             </tbody>
                         </table>
                     </div>
@@ -189,17 +182,13 @@
                         <table class="table" id="tbRecursos">
                             <thead>
                                 <tr>
-                                    <th>Cantidad</th>
-                                    <th>Alto</th>
-                                    <th>Ancho</th>
-                                    <th>Medida</th>
-                                    <th>Codigo</th>
-                                    <th>Recursos</th>
-                                    <th>Area</th>
+                                    <th>CÓDIGO</th>
+                                    <th>CANTIDAD</th>
+                                    <th>HORAS</th>
                                 </tr>
                             </thead>
                             <tbody id="bodyRecursos">
-                                <!-- <?php echo $bodyCanales?> -->
+                                <?php echo $recursos?>
                             </tbody>
                         </table>
                     </div>
