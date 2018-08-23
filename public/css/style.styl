@@ -1,9 +1,8 @@
-$light     = 'MetricLight'
-$regular   = 'MetricRegular'
-$medium    = 'MetricSemiBold'
-$bold      = 'MetricBold'
-$default   = #01a982
-$color     = #425563
+$light     = 'OpenSansLight'
+$regular   = 'OpenSansRegular'
+$medium    = 'OpenSansMedium'
+$bold      = 'OpenSansBold'
+$color     = #2799FA
 flexCenter()
 	display flex
 	display -webkit-flex
@@ -101,8 +100,8 @@ flipCardBackHover()
 body
 	margin 0
 	padding 0
-	font-family $regular
 	color #000000
+	font-family $regular
 	background-color #FFFFFF
 p
 	margin 0
@@ -113,104 +112,48 @@ label
 .js-section
 	position relative;
 	padding 40px 20px;
-.js-section--menu
-	absolute()
-	margin-top 10px
-	&.fadeIn
-		z-index 5
-		opacity 1
-	&.fadeOut
-		z-index 0
 .js-title
 	width 100%
 	margin 10px 0
 	font-size 36px
 	line-height 34px;
 	font-family $medium
-.js-flex
-	flexCenter()
 .js-height
 	height 100vh
-.js-header
-	position fixed
-	top 0
-	width 100%
-	background-color transparent
-	z-index 5
-	padding 10px 25px
-	color #FFFFFF
-	flexCenter()
+.js-flex
+	flexEnd()
 	img
 		width 100%
 		max-width 130px
-	.js-header--left
+	.js-flex__left
 		flexCenter()
 		width 100%
-		justify-content flex-start
-		p
+		text-align left
+		strong
+			font-size 40px
+			line-height 40px
+			color #707070
 			font-family $bold
-			margin-left 10px
-			font-size 16px
-			line-height 16px
-		img
-			&.js-partner
-				margin-right 10px
-				padding-right 10px
-				border-right 1px solid #000000
-	.js-header--right
-		flexCenter()
+	.js-flex__right
 		width 100%
-		justify-content flex-end
-		flex-wrap wrap
-		text-align right
-		p
-			font-size 20px
-			line-height 18px
-		a
-			width 100%
-			text-decoration none
-			cursor pointer
+		h2
 			font-size 18px
-			font-family $medium
-			color $default
-	&.js-relative
-		position relative
-		color #000000
-		box-shadow 1px 2px 3px rgba(0,0,0,.2)
-	&.js-fixed
-		background-color #FFFFFF
-		color #000000
-		box-shadow 1px 2px 3px rgba(0,0,0,.2)
-	&.js-header--login
-		color #000000
-		padding 35px
+			line-height 22px
+			margin 5px 0
+			color #707070
+			font-family $bold
+		p
+			font-size 14px
+			line-height 18px
 .js-container
 	transitionMaxWidth()
 	width 100%
-	max-width 1100px
+	max-width 1150px
 	height 100%
 	margin auto
 	position relative
 	&.js-flex
 		justify-content flex-end
-.js-fondo--login
-	absolute()
-	background url(../img/fondo/fondo-login.jpg) no-repeat center center
-	background-size cover
-	height 100vh
-.js-opacity-done
-	opacity 0
-	z-index -5
-.js-events-none
-	pointer-events none
-	opacity .6
-.js-login
-	width 100%
-	max-width 450px
-	h2
-		font-size 30px
-		line-height 30px
-		font-family $regular
 .js-input
 	padding 7px 20px
 	height 72px
@@ -304,69 +247,6 @@ label
 	&.js-button--login
 		width 100%
 		margin 20px 0
-.js-user
-	flexCenter()
-	padding 20px
-	.js-user--left
-		flexCenter()
-		justify-content flex-start
-		width 100%
-		p
-			font-size 20px
-	.js-user--right
-		flexCenter()
-		justify-content flex-end
-		width 100%
-.js-middle
-	flexCenter()
-	.js-middle--left
-		justify-content flex-start
-		width 100%
-	.js-middle--right
-		justify-content flex-end
-		width 100%
-		font-size 18px
-		text-align right
-		a
-			color #000000
-			text-decoration none
-			cursor pointer
-.js-terminos
-	h3
-		color $default
-		font-family $regular
-		margin 10px 0
-		font-size 24px
-	ul
-		li
-			padding 5px 0
-			font-size 18px
-			font-family $light
-			span
-				font-size 20px
-				font-family $regular
-			p
-				font-size 18px
-				font-family $light
-.js-puntaje
-	.js-puntaje__table
-		width 100%
-		max-width calc(100% - 300px)
-	.js-puntaje__puntos
-		width 100%
-		max-width 300px
-		text-align center
-		padding 20px
-		margin 20px
-		border-left 1px solid #000000
-		p
-			font-size 26px
-			line-height 28px
-		span
-			font-size 50px
-			font-family $medium
-			padding 30px 0
-			display block
 .js-table
 	h2
 		font-size 30px
@@ -375,6 +255,42 @@ label
 .js-excel
 	background-color $default !important
 	color #FFFFFF !important
+.js-tabs
+	flexCenter()
+	border none
+	margin 15px 0
+	padding 5px 0
+	border-top 1px solid #000000
+	&>li
+		margin 3px
+		width 100%
+		&.active
+			&>a
+				background-color $color
+				color #FFFFFF
+				border none
+				&:hover
+					background-color $color
+					color #FFFFFF
+		&>a
+			transitionBgColor()
+			border none !important
+			border-radius 0
+			background-color #5C5C5C
+			color #FFFFFF
+			text-align center
+			font-family $medium
+			&:HOVER
+				background-color $color
+			span
+				display block
+				width 100%
+.js-panel
+	background-color #E6E6E6
+	padding 15px
+	margin-top 10px
+	&>.tab-pane
+		background-color #FFFFFF
 /*TABLE*/
 table
 	&>tbody
@@ -384,36 +300,15 @@ table
 				padding 7px 10px !important
 				line-height 16px !important
 				vertical-align middle !important
-				button
-					height 28px !important
-					min-width 28px !important
-					width 28px !important
-					i
-						font-size 18px !important
-				&.js-table--input
-					input
-						width 100%
-						cursor pointer
-						outline 0 !important
-						text-align right
-					span
-						border 1px solid #BDBDBD
-						width 100%
-						display block
-						pointer-events none
-						opacity .6
-						padding 2px
-						height 22px
-						max-width 54px
-						float right
+				border none !important
 	&>thead
 		&>tr
 			&>th
 				color #000000
 				font-weight 100 !important
 				font-size 16px
-				border-top none !important
-				border-bottom 2px solid $default !important
+				border none !important
+				font-family $bold
 /*MATERIAL*/
 .mdl-card
 	width 100%

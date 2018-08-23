@@ -11,216 +11,166 @@
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
     	<title>M-lini - OPI</title>
-    	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.ico">
+    	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>favicon.png">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/css/bootstrap.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>opensans.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <div class="col-md-12" style="padding-top: 2%">
-            <div class="col-md-6 text-left">
-                <p>AREA DE IMPRESION Y ACABADOS</p>
-                <p>Jueves 8 de Agosto</p>
-            </div>
-            <div class="col-md-6 text-right">
-                <p>IMAGENTI</p>
-            </div>
-        </div>
-        <div class="col-md-12" style="padding-top: 2%">
-            <div class="col-md-6 text-left">
-                <h6>1882018236</h6>
-            </div>
-            <div class="col-md-6 text-right">
-                <h6>Reporte de Liquidación</h6>
-            </div>
-        </div>
-        <div class="row-fluid col-md-12" style="background: #d6d5d5">
-            <h4> COLUMNA impresión panel ranurado - RIPLEY MEGAPLAZA </h4>
-        </div>
-        <div class="col-md-12" style="padding-top: 15px">
-            <div class="tab" >
-                <button class="tablinks" onclick="openTab(event, 'Sustratos')" >Sustratos</button>
-                <button class="tablinks" onclick="openTab(event, 'Acabados')" >Acabados</button>
-                <button class="tablinks" onclick="openTab(event, 'Impresoras')" >Impresoras</button>
-                <button class="tablinks" onclick="openTab(event, 'Materiales')" >Materiales</button>
-                <button class="tablinks" onclick="openTab(event, 'Proveedores')" >Proveedores</button>
-                <button class="tablinks" onclick="openTab(event, 'Personales')" >Personales</button>
-                <button class="tablinks" onclick="openTab(event, 'Recursos')" >Recursos</button>
-            </div>
-        </div>
-        <div>
-            <div id="Sustratos" class="tabcontent" style="display:none">
-                <div style="padding-left: 20px; padding-right: 20px">
-                    <h3>Sustratos</h3>
-                    <div class="table-responsive">
-                        <table class="table" id="tbSustratos">
-                            <thead>
-                                <tr>
-                                    <th>CÓDIGO</th>
-                                    <th>UNIDADES</th>
-                                    <th>LONGITUD</th>
-                                    <th>TIEMPO</th>
-                                    <th>ÁREA</th>
-                                </tr>
-                            </thead>
-                            <tbody id="bodySustratos">
-                                <?php echo $suministros?>
-                            </tbody>
-                        </table>
+        <section id="principal" class="js-section">
+            <div class="js-container">
+                <div class="js-logo text-right">
+                    <img src="<?php echo RUTA_IMG?>logo-imagenti.png">
+                </div>
+                <div class="js-flex">
+                    <div class="js-flex__left">
+                        <strong>1882018236</strong>
+                    </div>
+                    <div class="js-flex__right">
+                        <h2>ORDEN DE IMPRESI&Oacute;N IMAGENTI (OPI)</h2>
+                        <p>ENTREGABLE: COLUMNA impresi&oacute;N panel ranurado - RIPLEY MEGAPLAZA</p>
+                        <p>CLIENTE: HP INC PERU</p>
+                        <p>CAMPA&Ntilde;A: COLUMNA RIPLEY MEGAPLAZA</p>
                     </div>
                 </div>
-            </div>
-            <div id="Acabados" class="tabcontent" style="display:none">
-                <div style="padding-left: 20px; padding-right: 20px">
-                    <h3>Acabados</h3>
-                    <div class="table-responsive">
-                        <table class="table" id="tbAcabados">
-                            <thead>
-                                <tr>
-                                    <th>CÓDIGO</th>
-                                    <th>UNIDADES</th>
-                                    <th>LONGITUD</th>
-                                    <th>TIEMPO</th>
-                                    <th>ÁREA</th>
-                                </tr>
-                            </thead>
-                            <tbody id="bodyAcabados">
-                                <?php echo $acabados?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div id="Impresoras" class="tabcontent" style="display:none">
-                <div style="padding-left: 20px; padding-right: 20px">
-                    <h3>Impresoras</h3>
-                    <div class="table-responsive">
-                        <table class="table" id="tbImpresoras">
-                            <thead>
-                                <tr>
-                                    <th>CÓDIGO</th>
-                                    <th>UNIDADES</th>
-                                    <th>LONGITUD</th>
-                                    <th>TIEMPO</th>
-                                    <th>ÁREA</th>
-                                </tr>
-                            </thead>
-                            <tbody id="bodyImpresoras">
-                                <?php echo $impresoras?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div id="Materiales" class="tabcontent" style="display:none">
-                <div style="padding-left: 20px; padding-right: 20px">
-                    <h3>Materiales</h3>
-                    <div class="table-responsive">
-                        <table class="table" id="tbMateriales">
-                            <thead>
-                                <tr>
-                                    <th>CÓDIGO</th>
-                                    <th>CANTIDAD</th>
-                                    <th>TOTAL</th>
-                                </tr>
-                            </thead>
-                            <tbody id="bodyMateriales">
-                                <?php echo $materiales?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div id="Proveedores" class="tabcontent" style="display:none">
-                <div style="padding-left: 20px; padding-right: 20px">
-                    <h3>Proveedores</h3>
-                    <div class="table-responsive">
-                        <table class="table" id="tbProveedores">
-                            <thead>
-                                <tr>
-                                    <th>CÓDIGO</th>
-                                    <th>CANTIDAD</th>
-                                    <th>SOLES</th>
-                                    <th>DÓLATES</th>
-                                </tr>
-                            </thead>
-                            <tbody id="bodyProveedores">
-                                <?php echo $proveedores?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div id="Personales" class="tabcontent" style="display:none">
-                <div style="padding-left: 20px; padding-right: 20px">
-                    <h3>Personales</h3>
-                    <div class="table-responsive">
-                        <table class="table" id="tbPersonales">
-                            <thead>
-                                <tr>
-                                    <th>CÓDIGO</th>
-                                    <th>CANTIDAD</th>
-                                    <th>IMPORTE</th>
-                                </tr>
-                            </thead>
-                            <tbody id="bodyPersonales">
-                                <?php echo $personal?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div id="Recursos" class="tabcontent" style="display:none">
-                <div style="padding-left: 20px; padding-right: 20px">
-                    <h3>Recursos</h3>
-                    <div class="table-responsive">
-                        <table class="table" id="tbRecursos">
-                            <thead>
-                                <tr>
-                                    <th>CÓDIGO</th>
-                                    <th>CANTIDAD</th>
-                                    <th>HORAS</th>
-                                </tr>
-                            </thead>
-                            <tbody id="bodyRecursos">
-                                <?php echo $recursos?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <button type="button" name="boton" id="boton1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" style="display:none">GRABAR Y CERRAR</button>
-            </div>
-        </div>
-        <!-- MODAL RECUPERAR CONTRASEÑA -->
-        <!-- <div class="modal fade" id="recuperaContrasena" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="mdl-card">
-                        <div class="mdl-card__title">
-                            <h2>Recuperar Contrase&ntilde;a</h2>
-                            <p>Comp&aacute;rtenos tu correo y en breve te enviaremos un correo con tu contrase&ntilde;a</p>
+                <ul class="nav nav-tabs js-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#sustratos" aria-controls="sustratos" role="tab" data-toggle="tab"><span>1</span><span>SUSTRATOS</span></a></li>
+                    <li><a href="#acabados" aria-controls="acabados" role="tab" data-toggle="tab"><span>2</span><span>ACABADOS</span></a></li>
+                    <li><a href="#impresoras" aria-controls="impresoras" role="tab" data-toggle="tab"><span>3</span><span>IMPRESORAS</span></a></li>
+                    <li><a href="#materiales" aria-controls="materiales" role="tab" data-toggle="tab"><span>4</span><span>MATERIALES</span></a></li>
+                    <li><a href="#proveedores" aria-controls="proveedores" role="tab" data-toggle="tab"><span>5</span><span>PROVEEDORES</span></a></li>
+                    <li><a href="#personales" aria-controls="personales" role="tab" data-toggle="tab"><span>6</span><span>PERSONALES</span></a></li>
+                    <li><a href="#recursos" aria-controls="recursos" role="tab" data-toggle="tab"><span>7</span><span>RECURSOS</span></a></li>
+                </ul>
+                <div class="tab-content js-panel">
+                    <div role="tabpanel" class="tab-pane active" id="sustratos">
+                        <div class="table-responsive">
+                            <table class="table" id="tbSustratos">
+                                <thead>
+                                    <tr>
+                                        <th>CÓDIGO</th>
+                                        <th>UNIDADES</th>
+                                        <th>LONGITUD</th>
+                                        <th>TIEMPO</th>
+                                        <th>ÁREA</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodySustratos">
+                                    <?php echo $suministros?>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="mdl-card__supporting-text">
-                            <div class="col-xs-12 js-input">
-                                <label for="usuarioRecupera">Usuario</label>
-                                <input type="text" id="usuarioRecupera" onkeyup="verificarDatos(event);">
-                            </div>
-                        </div> 
-                        <div class="mdl-card__actions text-right">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--default" data-dismiss="modal">Cancelar</button>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="recuperar()" >Aceptar</button>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="acabados">
+                        <div class="table-responsive">
+                            <table class="table" id="tbAcabados">
+                                <thead>
+                                    <tr>
+                                        <th>CÓDIGO</th>
+                                        <th>UNIDADES</th>
+                                        <th>LONGITUD</th>
+                                        <th>TIEMPO</th>
+                                        <th>ÁREA</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodyAcabados">
+                                    <?php echo $acabados?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="impresoras">
+                        <div class="table-responsive">
+                            <table class="table" id="tbImpresoras">
+                                <thead>
+                                    <tr>
+                                        <th>CÓDIGO</th>
+                                        <th>UNIDADES</th>
+                                        <th>LONGITUD</th>
+                                        <th>TIEMPO</th>
+                                        <th>ÁREA</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodyImpresoras">
+                                    <?php echo $impresoras?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="materiales">
+                        <div class="table-responsive">
+                            <table class="table" id="tbMateriales">
+                                <thead>
+                                    <tr>
+                                        <th>CÓDIGO</th>
+                                        <th>CANTIDAD</th>
+                                        <th>TOTAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodyMateriales">
+                                    <?php echo $materiales?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="proveedores">
+                        <div class="table-responsive">
+                            <table class="table" id="tbProveedores">
+                                <thead>
+                                    <tr>
+                                        <th>CÓDIGO</th>
+                                        <th>CANTIDAD</th>
+                                        <th>SOLES</th>
+                                        <th>DÓLATES</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodyProveedores">
+                                    <?php echo $proveedores?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="personales">
+                        <div class="table-responsive">
+                            <table class="table" id="tbPersonales">
+                                <thead>
+                                    <tr>
+                                        <th>CÓDIGO</th>
+                                        <th>CANTIDAD</th>
+                                        <th>IMPORTE</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodyPersonales">
+                                    <?php echo $personal?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="recursos">
+                        <div class="table-responsive">
+                            <table class="table" id="tbRecursos">
+                                <thead>
+                                    <tr>
+                                        <th>CÓDIGO</th>
+                                        <th>CANTIDAD</th>
+                                        <th>HORAS</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodyRecursos">
+                                    <?php echo $recursos?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </section>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
