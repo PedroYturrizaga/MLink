@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit ('No direct script access allowed');
 
-class Reporte extends CI_Controller {
+class Opi extends CI_Controller {
 	
     function __construct(){
         parent::__construct();
@@ -86,7 +86,7 @@ class Reporte extends CI_Controller {
         $data['personal']    = $personal;
         $data['proveedores'] = $proveedores;
         $data['recursos']    = $recursos;
-		$this->load->view('v_reporte', $data);
+		$this->load->view('v_opi', $data);
 	}
 
     function muestraDatos() {
