@@ -30,13 +30,13 @@
                 </div>
                 <div class="js-flex">
                     <div class="js-flex__left">
-                        <strong>1882018236</strong>
+                        <strong><?php echo $preoferta ?></strong>
                     </div>
                     <div class="js-flex__right">
                         <h2>ORDEN DE IMPRESI&Oacute;N IMAGENTI (OPI)</h2>
-                        <p>ENTREGABLE: COLUMNA impresi&oacute;N panel ranurado - RIPLEY MEGAPLAZA</p>
-                        <p>CLIENTE: HP INC PERU</p>
-                        <p>CAMPA&Ntilde;A: COLUMNA RIPLEY MEGAPLAZA</p>
+                        <p>ENTREGABLE: <?php echo $entregable ?></p>
+                        <p>CLIENTE: <?php echo $cliente ?></p>
+                        <p>CAMPA&Ntilde;A: <?php echo $campana ?></p>
                     </div>
                 </div>
                 <ul class="nav nav-tabs js-tabs" role="tablist">
@@ -55,14 +55,15 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
+                                        <th>NOMBRE</th>
                                         <th>UNIDADES</th>
                                         <th>LONGITUD</th>
-                                        <th>TIEMPO</th>
+                                        <th>MEDIDA</th>
                                         <th>ÁREA</th>
                                     </tr>
                                 </thead>
                                 <tbody id="bodySustratos">
-                                    <?php echo $suministros?>
+                                    <?php echo $sustrato?>
                                 </tbody>
                             </table>
                         </div>
@@ -73,14 +74,15 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
+                                        <th>NOMBRE</th>
                                         <th>UNIDADES</th>
                                         <th>LONGITUD</th>
-                                        <th>TIEMPO</th>
+                                        <th>MEDIDA</th>
                                         <th>ÁREA</th>
                                     </tr>
                                 </thead>
                                 <tbody id="bodyAcabados">
-                                    <?php echo $acabados?>
+                                    <?php echo $acabado?>
                                 </tbody>
                             </table>
                         </div>
@@ -91,10 +93,9 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
+                                        <th>NOMBRE</th>
                                         <th>UNIDADES</th>
-                                        <th>LONGITUD</th>
-                                        <th>TIEMPO</th>
-                                        <th>ÁREA</th>
+                                        <th>MEDIDA</th>
                                     </tr>
                                 </thead>
                                 <tbody id="bodyImpresoras">
@@ -127,7 +128,7 @@
                                         <th>CÓDIGO</th>
                                         <th>CANTIDAD</th>
                                         <th>SOLES</th>
-                                        <th>DÓLATES</th>
+                                        <th>DÓLARES</th>
                                     </tr>
                                 </thead>
                                 <tbody id="bodyProveedores">

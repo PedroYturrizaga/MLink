@@ -30,13 +30,13 @@
                 </div>
                 <div class="js-flex">
                     <div class="js-flex__left">
-                        <strong>1882018236</strong>
+                        <strong><?php echo $preoferta ?></strong>
                     </div>
                     <div class="js-flex__right">
                         <h2>ORDEN DE IMPRESI&Oacute;N IMAGENTI (OPI)</h2>
-                        <p>ENTREGABLE: COLUMNA impresi&oacute;N panel ranurado - RIPLEY MEGAPLAZA</p>
-                        <p>CLIENTE: HP INC PERU</p>
-                        <p>CAMPA&Ntilde;A: COLUMNA RIPLEY MEGAPLAZA</p>
+                        <p>ENTREGABLE: <?php echo $entregable ?> </p>
+                        <p>CLIENTE: <?php echo $cliente ?> </p>
+                        <p>CAMPA&Ntilde;A: <?php echo $campana ?> </p>
                     </div>
                 </div>
                 <ul class="nav nav-tabs js-tabs" role="tablist">
@@ -53,18 +53,20 @@
                 <div class="tab-content js-panel">
                     <div role="tabpanel" class="tab-pane active" id="materiales">
                         <div class="table-responsive">
-                            <table class="table" id="tbSustratos">
+                            <table class="table" id="tbMateriales">
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
-                                        <th>UNIDADES</th>
-                                        <th>LONGITUD</th>
-                                        <th>TIEMPO</th>
-                                        <th>ÁREA</th>
+                                        <th>SUSTRATO</th>
+                                        <th>DETALLE</th>
+                                        <th>VALOR</th>
+                                        <th>UNIDAD</th>
+                                        <th>CANTIDAD</th>
+                                        <th>TOTAL</th>
                                     </tr>
                                 </thead>
-                                <tbody id="bodySustratos">
-                                    <?php echo $suministros?>
+                                <tbody id="bodyMateriales">
+                                    <?php echo $materiales?>
                                 </tbody>
                             </table>
                         </div>
@@ -75,14 +77,15 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
-                                        <th>UNIDADES</th>
-                                        <th>LONGITUD</th>
-                                        <th>TIEMPO</th>
-                                        <th>ÁREA</th>
+                                        <th>SUSTRATO</th>
+                                        <th>DETALLE</th>
+                                        <th>UNIDAD</th>
+                                        <th>CANTIDAD</th>
+                                        <th>TOTAL</th>
                                     </tr>
                                 </thead>
                                 <tbody id="bodyFerreteria">
-                                    <?php echo $acabados?>
+                                    <?php echo $ferreteria?>
                                 </tbody>
                             </table>
                         </div>
