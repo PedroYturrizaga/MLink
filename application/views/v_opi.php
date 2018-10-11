@@ -33,7 +33,7 @@
                         <strong><?php echo $preoferta ?></strong>
                     </div>
                     <div class="js-flex__right">
-                        <h2>ORDEN DE IMPRESI&Oacute;N IMAGENTI (OPI)</h2>
+                        <h2><?php echo $nentregable?></h2>
                         <p>ENTREGABLE: <?php echo $entregable ?></p>
                         <p>CLIENTE: <?php echo $cliente ?></p>
                         <p>CAMPA&Ntilde;A: <?php echo $campana ?></p>

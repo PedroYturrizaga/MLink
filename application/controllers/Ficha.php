@@ -17,7 +17,6 @@ class Ficha extends CI_Controller {
         $url = 'http://192.168.200.93/controladores/ImagentiFicha/1';
         $json = file_get_contents($url);
         $variable1 = json_decode($json, true);
-
         $amanecida      = '';
         $gastos         = '';
         $sinComprobante = '';
@@ -32,24 +31,19 @@ class Ficha extends CI_Controller {
         $entregable     = '';
         $cliente        = '';
         $campana        = '';
+        $nentregable    = '';
         $j=0;
         foreach ($variable1[0] as $value) {
             foreach ($value as $key) {
                 if ($j == 0) {
+                    $nentregable= $key['nentregable'];
                     $preoferta  = $key['preoferta'];
                     $entregable = $key['entregable'];
                     $cliente    = $key['cliente'];
                     $campana    = $key['campana'];
                     $j++;
                 } else {
-A = Amanecida
-G =  Gastos
-D =   Gastos sin comprobante
-O =  Overtimes
-P  = Personal
-R =  Proveedores
-S = Sustrato
-                    print_r($key);
+                    // print_r($key);
                     switch ($key['tipo']) {
                         case 'M':
                             $materiales .= '<tr>
@@ -57,8 +51,9 @@ S = Sustrato
                                                 <td>'.$key['nombre'].'</td>
                                                 <td>'.$key['detalle'].'</td>
                                                 <td>'.$key['valor'].'</td>
-                                                <td>'.$key['unidad'].'</td>
                                                 <td>'.$key['cantidad'].'</td>
+                                                <td>'.$key['consumo'].'</td>
+                                                <td>'.$key['unidad'].'</td>
                                                 <td>'.$key['total'].'</td>
                                             </tr>';
                             break;
@@ -69,80 +64,85 @@ S = Sustrato
                                                 <td>'.$key['detalle'].'</td>
                                                 <td>'.$key['unidad'].'</td>
                                                 <td>'.$key['cantidad'].'</td>
+                                                <td>'.$key['consumo'].'</td>
                                                 <td>'.$key['total'].'</td>
                                             </tr>';
                             break;
-                        case 'I':
-                            $impresoras .= '<tr>
-                                                <td>'.$key['codsap'].'</td>
-                                                <td>'.$key['unidades'].'</td>
-                                                <td>'.$key['longitud'].'</td>
-                                                <td>'.$key['tiempo'].'</td>
-                                                <td>'.$key['area'].'</td>
-                                            </tr>';
+                        case 'A':
+                            $amanecida .= '<tr>
+                                               <td>'.$key['codsap'].'</td>
+                                               <td>'.$key['unidades'].'</td>
+                                               <td>'.$key['longitud'].'</td>
+                                               <td>'.$key['tiempo'].'</td>
+                                               <td>'.$key['area'].'</td>
+                                           </tr>';
                             break;
-                        case 'M':
-                            $suministros .= '<tr>
+                        case 'G':
+                            $gastos .= '<tr>
+                                            <td>'.$key['codsap'].'</td>
+                                            <td>'.$key['cantidad'].'</td>
+                                            <td>'.$key['total'].'</td>
+                                        </tr>';
+                            break;
+                        case 'D':
+                            $sinComprobante .= '<tr>
+                                                    <td>'.$key['nombre'].'</td>
+                                                    <td>'.$key['total'].'</td>
+                                                </tr>';
+                            break;
+                        case 'O':
+                            $overtimes .= '<tr>
+                                               <td>'.$key['codsap'].'</td>
+                                               <td>'.$key['nombre'].'</td>
+                                               <td>'.$key['detalle'].'</td>
+                                               <td>'.$key['unidad'].'</td>
+                                               <td>'.$key['cantidad'].'</td>
+                                               <td>'.$key['total'].'</td>
+                                           </tr>';
+                            break;
+                        case 'P':
+                            $personal .= '<tr>
                                               <td>'.$key['codsap'].'</td>
-                                              <td>'.$key['cantidad'].'</td>
-                                              <td>'.$key['total'].'</td>
+                                              <td>'.$key['nombre'].'</td>
+                                              <td>'.$key['responsable'].'</td>
+                                              <td>'.$key['horas'].'</td>
                                           </tr>';
                             break;
-                        case 'M':
-                            $materiales .= '<tr>
-                                                <td>'.$key['codsap'].'</td>
-                                                <td>'.$key['nombre'].'</td>
-                                                <td>'.$key['detalle'].'</td>
-                                                <td>'.$key['valor'].'</td>
-                                                <td>'.$key['unidad'].'</td>
-                                                <td>'.$key['cantidad'].'</td>
-                                                <td>'.$key['total'].'</td>
-                                            </tr>';
+                        case 'R':
+                            $proveedores .= '<tr>
+                                                 <td>'.$key['codproveedor'].'</td>
+                                                 <td>'.$key['nombre'].'</td>
+                                                 <td>'.$key['cantidad'].'</td>
+                                                 <td>'.$key['soles'].'</td>
+                                                 <td>'.$key['dolares'].'</td>
+                                             </tr>';
                             break;
-                        case 'F':
-                            $ferreteria .= '<tr>
-                                                <td>'.$key['codsap'].'</td>
-                                                <td>'.$key['nombre'].'</td>
-                                                <td>'.$key['detalle'].'</td>
-                                                <td>'.$key['unidad'].'</td>
-                                                <td>'.$key['cantidad'].'</td>
-                                                <td>'.$key['total'].'</td>
-                                            </tr>';
-                            break;
-                        case 'I':
-                            $impresoras .= '<tr>
-                                                <td>'.$key['codsap'].'</td>
-                                                <td>'.$key['unidades'].'</td>
-                                                <td>'.$key['longitud'].'</td>
-                                                <td>'.$key['tiempo'].'</td>
-                                                <td>'.$key['area'].'</td>
-                                            </tr>';
-                            break;
-                        case 'M':
-                            $suministros .= '<tr>
+                        case 'S':
+                            $sustrato .= '<tr>
                                               <td>'.$key['codsap'].'</td>
+                                              <td>'.$key['nombre'].'</td>
                                               <td>'.$key['cantidad'].'</td>
-                                              <td>'.$key['total'].'</td>
                                           </tr>';
                             break;
                     }
                 }
             }
         }
-        $data['materiales']  = $materiales;
-        $data['ferreteria']  = $ferreteria;
+        $data['amanecida']      = $amanecida;
+        $data['gastos']         = $gastos;
+        $data['sinComprobante'] = $sinComprobante;
+        $data['materiales']     = $materiales;
+        $data['ferreteria']     = $ferreteria;
+        $data['overtimes']      = $overtimes;
+        $data['personal']       = $personal;
+        $data['proveedores']    = $proveedores;
+        $data['sustrato']       = $sustrato;
 
-        $data['suministros'] = $suministros;
-        $data['acabados']    = $acabados;
-        $data['impresoras']  = $impresoras;
-        $data['personal']    = $personal;
-        $data['proveedores'] = $proveedores;
-        $data['recursos']    = $recursos;
-
-        $data ['preoferta']  = $preoferta;
-        $data ['entregable'] = $entregable;
-        $data ['cliente']    = $cliente;
-        $data ['campana']    = $campana;
+        $data ['nentregable']   = $nentregable;
+        $data ['preoferta']     = $preoferta;
+        $data ['entregable']    = $entregable;
+        $data ['cliente']       = $cliente;
+        $data ['campana']       = $campana;
 		$this->load->view('v_ficha_taller', $data);
 	}
 }

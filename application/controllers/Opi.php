@@ -29,10 +29,12 @@ class Opi extends CI_Controller {
         $entregable  = '';
         $cliente     = '';
         $campana     = '';
+        $nentregable = '';
         $j = 0;
         foreach ($variable2[0] as $value) {
             foreach ($value as $key) {
                 if ($j == 0) {
+                    $nentregable= $key['nentregable'];
                     $preoferta  = $key['preoferta'];
                     $entregable = $key['entregable'];
                     $cliente    = $key['cliente'];
@@ -108,7 +110,8 @@ class Opi extends CI_Controller {
         $data['personal']    = $personal;
         $data['proveedores'] = $proveedores;
         $data['recursos']    = $recursos;
-
+        
+        $data ['nentregable']= $nentregable;
         $data ['preoferta']  = $preoferta;
         $data ['entregable'] = $entregable;
         $data ['cliente']    = $cliente;
