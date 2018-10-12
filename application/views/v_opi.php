@@ -110,7 +110,10 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
+                                        <th>NOMBRE</th>
+                                        <th>DETALLE</th>
                                         <th>CANTIDAD</th>
+                                        <th>CONSUMO</th>
                                         <th>TOTAL</th>
                                     </tr>
                                 </thead>
@@ -126,6 +129,7 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
+                                        <th>NOMBRE</th>
                                         <th>CANTIDAD</th>
                                         <th>SOLES</th>
                                         <th>DÓLARES</th>
@@ -143,6 +147,9 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
+                                        <th>NOMBRE</th>
+                                        <th>DETALLE</th>
+                                        <th>UNITARIO</th>
                                         <th>CANTIDAD</th>
                                         <th>IMPORTE</th>
                                     </tr>
@@ -159,8 +166,11 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
+                                        <th>NOMBRE</th>
                                         <th>CANTIDAD</th>
+                                        <th>PERSONAS</th>
                                         <th>HORAS</th>
+                                        <th>TAREA</th>
                                     </tr>
                                 </thead>
                                 <tbody id="bodyRecursos">

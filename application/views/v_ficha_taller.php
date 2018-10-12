@@ -57,12 +57,9 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
-                                        <th>SUSTRATO</th>
-                                        <th>DETALLE</th>
-                                        <th>VALOR</th>
-                                        <th>UNIDAD</th>
-                                        <th>CANTIDAD</th>
-                                        <th>TOTAL</th>
+                                        <th>NOMBRE</th>
+                                        <th>PERSONAL</th>
+                                        <th>N&Uacute;MERO</th>
                                     </tr>
                                 </thead>
                                 <tbody id="bodyAmanecida">
@@ -77,9 +74,9 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
-                                        <th>SUSTRATO</th>
+                                        <th>NOMBRE</th>
                                         <th>DETALLE</th>
-                                        <th>UNIDAD</th>
+                                        <th>UNITARIO</th>
                                         <th>CANTIDAD</th>
                                         <th>TOTAL</th>
                                     </tr>
@@ -152,8 +149,10 @@
                                 <thead>
                                     <tr>
                                         <th>CÓDIGO</th>
-                                        <th>CANTIDAD</th>
-                                        <th>IMPORTE</th>
+                                        <th>NOMBRE</th>
+                                        <th>PERSONAL</th>
+                                        <th>HORAS</th>
+                                        <th>DESDE - HASTA</th>
                                     </tr>
                                 </thead>
                                 <tbody id="bodyOvertimes">

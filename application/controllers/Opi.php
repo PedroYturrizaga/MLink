@@ -73,20 +73,27 @@ class Opi extends CI_Controller {
                         case 'M':
                             $materiales .= '<tr>
                                                 <td>'.$key['codsap'].'</td>
+                                                <td>'.$key['nombre'].'</td>
+                                                <td>'.$key['detallar'].'</td>
                                                 <td>'.$key['cantidad'].'</td>
+                                                <td>'.$key['consumo'].'</td>
                                                 <td>'.$key['total'].'</td>
                                             </tr>';
                             break;
                         case 'P':
                             $personal .= '<tr>
                                               <td>'.$key['codsap'].'</td>
+                                              <td>'.$key['nombre'].'</td>
+                                              <td>'.$key['detalle'].'</td>
+                                              <td>'.$key['unitario'].'</td>
                                               <td>'.$key['cantidad'].'</td>
                                               <td>'.$key['importe'].'</td>
                                           </tr>';
                             break;
                         case 'V':
                             $proveedores .= '<tr>
-                                                 <td>'.$key['codigo'].'</td>
+                                                 <td>'.$key['codsap'].'</td>
+                                                 <td>'.$key['nombre'].'</td>
                                                  <td>'.$key['cantidad'].'</td>
                                                  <td>'.$key['soles'].'</td>
                                                  <td>'.$key['dolares'].'</td>
@@ -95,8 +102,11 @@ class Opi extends CI_Controller {
                         case 'R':
                             $recursos .= '<tr>
                                               <td>'.$key['codsap'].'</td>
+                                              <td>'.$key['nombre'].'</td>
                                               <td>'.$key['cantidad'].'</td>
+                                              <td>'.$key['personas'].'</td>
                                               <td>'.$key['horas'].'</td>
+                                              <td>'.$key['tarea'].'</td>
                                           </tr>';
                             break;
                     }

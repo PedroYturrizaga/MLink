@@ -43,7 +43,6 @@ class Ficha extends CI_Controller {
                     $campana    = $key['campana'];
                     $j++;
                 } else {
-                    // print_r($key);
                     switch ($key['tipo']) {
                         case 'M':
                             $materiales .= '<tr>
@@ -71,15 +70,17 @@ class Ficha extends CI_Controller {
                         case 'A':
                             $amanecida .= '<tr>
                                                <td>'.$key['codsap'].'</td>
-                                               <td>'.$key['unidades'].'</td>
-                                               <td>'.$key['longitud'].'</td>
-                                               <td>'.$key['tiempo'].'</td>
-                                               <td>'.$key['area'].'</td>
+                                               <td>'.$key['nombre'].'</td>
+                                               <td>'.$key['personal'].'</td>
+                                               <td>'.$key['numero'].'</td>
                                            </tr>';
                             break;
                         case 'G':
                             $gastos .= '<tr>
                                             <td>'.$key['codsap'].'</td>
+                                            <td>'.$key['nombre'].'</td>
+                                            <td>'.$key['detalle'].'</td>
+                                            <td>'.$key['unitario'].'</td>
                                             <td>'.$key['cantidad'].'</td>
                                             <td>'.$key['total'].'</td>
                                         </tr>';
@@ -94,10 +95,9 @@ class Ficha extends CI_Controller {
                             $overtimes .= '<tr>
                                                <td>'.$key['codsap'].'</td>
                                                <td>'.$key['nombre'].'</td>
-                                               <td>'.$key['detalle'].'</td>
-                                               <td>'.$key['unidad'].'</td>
-                                               <td>'.$key['cantidad'].'</td>
-                                               <td>'.$key['total'].'</td>
+                                               <td>'.$key['personal'].'</td>
+                                               <td>'.$key['horas'].'</td>
+                                               <td>'.$key['inicio'].' - '.$key['fin'].'</td>
                                            </tr>';
                             break;
                         case 'P':
