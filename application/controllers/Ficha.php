@@ -43,6 +43,7 @@ class Ficha extends CI_Controller {
                     $campana    = $key['campana'];
                     $j++;
                 } else {
+                    // print_r($key);
                     switch ($key['tipo']) {
                         case 'M':
                             $materiales .= '<tr>
