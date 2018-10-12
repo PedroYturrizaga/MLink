@@ -21,6 +21,16 @@
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>opensans.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
+        <style>
+            .js-tabs{
+                align-items: stretch;
+            }
+
+            .js-tabs li a{
+                height: 100%!important;
+            }
+
+        </style>
     </head>
     <body>
         <section id="principal" class="js-section">
